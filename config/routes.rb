@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'categories#index'
   resources :varietals
   resources :categories
   get 'search', to: "varietals#index"

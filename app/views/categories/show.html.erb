@@ -1,4 +1,19 @@
-<% @varietals.each do |varietal| %>
- <%=link_to varietal.name, varietal_path %>
- --- <%= varietal.description %> <hr>
-<% end %>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+    <h1>  <%= @category.name %></h1> <br>
+
+      <% @varietals.each do |varietal| %>
+       <%=link_to varietal.name, varietal_path %>
+       --- <%= varietal.description %>
+       <hr id="hrred">
+      <% end %>
+
+    </div>
+  </body>
+</html>

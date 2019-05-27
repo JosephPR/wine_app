@@ -8,20 +8,6 @@
 Varietal.destroy_all
 Category.destroy_all
 
-
-red = Category.create(name: "Red");
-white = Category.create(name: "White");
-
-
-Varietal.create(
-   name: "Pinot Noir",
-   description: "Light-body, earthy",
-   category: red);
-Varietal.create(
-   name: "Barbera",
-   description: "ruby- red, medium body,
-   dark fruit notes", category: red);
-Varietal.create(
-  name: "Chardonay",
-   description: "medium-full body, barn notes ex.hay,grass",
-    category: white);
+red = Category.create(name: "Red Wines")
+white = Category.create(name: "White Wines")
+sparkling = Category.create(name: "Sparkling Wines")
