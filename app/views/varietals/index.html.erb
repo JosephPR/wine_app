@@ -1,0 +1,16 @@
+<h2>Varietals</h2>
+
+<%= form_tag "/search", method: :get do %>
+  <%= label_tag :search_term, "Search" %>
+<%= text_field_tag :search_term %>
+<%= submit_tag "Search" %>
+<% end %>
+
+<ul> <% @varietals.each do |varietal| %>
+
+  <li><%=link_to varietal.name, varietal_path(varietal) %></li>
+  <p>  <%= varietal.description %></p>
+ <br>
+<% end %>
+</ul>
+<%= link_to "Add a new Varietal", new_varietal_path %>
