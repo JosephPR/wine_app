@@ -1,0 +1,4 @@
+<% @varietals.each do |varietal| %>
+ <%=link_to varietal.name, varietal_path %>
+ --- <%= varietal.description %> <hr>
+<% end %>
