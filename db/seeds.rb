@@ -8,6 +8,7 @@
 Varietal.destroy_all
 Category.destroy_all
 
-red = Category.create(name: "Red Wines")
-white = Category.create(name: "White Wines")
-sparkling = Category.create(name: "Sparkling Wines")
+
+red = Category.create(name: "Red Wines");
+white = Category.create(name: "White Wines");
+sparkling = Category.create(name: "Sparkling Wines");

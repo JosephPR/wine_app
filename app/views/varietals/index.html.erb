@@ -13,7 +13,7 @@
 
         <%= form_tag "/search", method: :get do %>
         <%= text_field_tag :search_term%>
-        <%= submit_tag "Wine Search" %>
+        <%= submit_tag "Wine Search", :class => 'btn btn-outline-info btn-sm' %>
         <% end %>
 <hr id="hrmain">
       <% @varietals.each do |varietal| %>
@@ -23,7 +23,7 @@
          <hr id="hrred">
         <% end %>
 
-        <%= link_to "Add a new Varietal", new_varietal_path %>
+        <%= link_to "Add a new Varietal", new_varietal_path, :class => "btn btn-outline-primary" %>
 
       </div>
   </div>

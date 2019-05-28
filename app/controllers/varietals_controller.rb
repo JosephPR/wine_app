@@ -14,7 +14,10 @@ class VarietalsController < ApplicationController
 
   def new
     @varietal   = Varietal.new
+    # @category = Category.find{@varietal.category_id}
     @categories = Category.all
+
+
   end
 
   def create
@@ -30,6 +33,6 @@ class VarietalsController < ApplicationController
   private
 
     def varietal_params
-      params.require(:varietal).permit(:name, :description, :category_id)
+      params.require(:varietal).permit(:name, :description, :image_url, :category_id)
     end
 end

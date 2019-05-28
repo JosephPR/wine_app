@@ -3,6 +3,7 @@ class CreateVarietals < ActiveRecord::Migration[5.2]
     create_table :varietals do |t|
       t.string :name
       t.text   :description
+      t.string :image_url
       t.references :category
 
       t.timestamps

@@ -9,7 +9,7 @@
     <h1>  <%= @category.name %></h1> <br>
 
       <% @varietals.each do |varietal| %>
-       <%=link_to varietal.name, varietal_path %>
+       <%=link_to varietal.name, varietal %>
        --- <%= varietal.description %>
        <hr id="hrred">
       <% end %>

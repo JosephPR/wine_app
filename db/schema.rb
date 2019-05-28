@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_05_27_180806) do
   create_table "varietals", force: :cascade do |t|
     t.string "name"
     t.text "description"
+    t.string "image_url"
     t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
