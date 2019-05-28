@@ -10,12 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_27_180806) do
+ActiveRecord::Schema.define(version: 2019_05_28_154932) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.integer "varietal_id"
+    t.string "sweetness"
+    t.string "acidity"
+    t.string "tanin"
+    t.float "alcohol"
+    t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["varietal_id"], name: "index_notes_on_varietal_id"
   end
 
   create_table "varietals", force: :cascade do |t|

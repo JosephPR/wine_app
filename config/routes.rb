@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :notes
   root 'categories#index'
   resources :varietals
   resources :categories

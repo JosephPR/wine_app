@@ -4,12 +4,13 @@ class VarietalsController < ApplicationController
     if params[:search_term]
       @varietals = Varietal.where("name LIKE ?", "%#{params[:search_term]}%")
     else
-    @varietals = Varietal.all
+    @varietals   = Varietal.all
     end
   end
 
   def show
     @varietal = Varietal.find(params[:id])
+    @notes = Note.select{|note| note.varietal_id == @varietal.id}
   end
 
   def new
