@@ -18,14 +18,31 @@
         <div id="pic" >
              <%= link_to image_tag @varietal.image_url, :class => "img-fluid" %>
           </div>
-            <%= link_to "Edit", edit_varietal_path(@varietal), :class => "btn btn-outline-success" %>
+            <%= link_to "Edit Varietal", edit_varietal_path(@varietal), :class => "btn btn-outline-success" %>
             <hr>
       </div>
       <div class="col-4">
           <h4>Tasting notes</h4>
 
           <hr>
-            <%= link_to 'Add notes', new_note_path %>
+            <%= link_to 'Add notes', new_note_path, :class => 'btn btn-outline-primary' %>    <%= link_to 'Edit Notes', edit_note_path, :class => 'btn btn-outline-success' %>
+            <hr id="hrmain">
+            <% @notes.each do |note| %>
+
+            <ul class="list-group list-group-flush">
+<li class="list-group-item"><u>Sweetness:</u>   <%= note.sweetness %></li>
+<li class="list-group-item"><u>Acidity:</u> <%= note.acidity %></li>
+<li class="list-group-item"><u>Tanin:</u>   <%= note.tanin %></li>
+<li class="list-group-item">  <u>Alcohol:</u> <%= note.alcohol %></li>
+<li class="list-group-item">  <u>Body:</u> <%= note.body %></li>
+  <% end %>
+</ul>
+<!--
+            <h5></h5><br>
+            <h5></h5><br>
+            <h5></h5><br>
+            <h5>Alcohol:</h5><br>
+            <h5></h5><br> -->
       </div>
     </div>
 

@@ -20,6 +20,23 @@ class NotesController < ApplicationController
     redirect_to varietals_path
 
     end
+
+    def edit
+      @note = Note.find(params[:id])
+      @varietals = Varietal.all
+    end
+
+    def update
+      @note = Note.find(params[:id])
+
+      if(@note.update(notes_params))
+        redirect_to varietal_path
+      else
+        render 'edit'
+      end
+    end
+
+
   end
 
 
@@ -28,6 +45,6 @@ class NotesController < ApplicationController
     private
 
     def notes_params
-      params.require(:note).permit(:sweetness, :acidity, :tanin, :alcohol, :body)
+      params.require(:note).permit(:sweetness, :acidity, :tanin, :alcohol, :body, :varietal_id)
     end
 end
