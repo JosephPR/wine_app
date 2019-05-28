@@ -1,4 +1,20 @@
+<<<<<<< HEAD
       <% if @note.errors%>
+=======
+<<<<<<< HEAD
+=======
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <div class="container">
+
+
+        <% if @note.errors%>
+>>>>>>> db9b01cd9279c7f3c70a7202066adb77c4898a17
           <% @note.errors.full_messages.each do |message|  %>
             <p><%= message %></p>
           <% end %>
@@ -14,4 +30,12 @@
           <%= f.text_field :body%> <br>
           <%= f.submit "Add Note"%>
         <% end %>
+<<<<<<< HEAD
 </div>
+=======
+
+      </div>
+  </body>
+</html>
+>>>>>>> 9b015e1826893acef885572b1a556e7483ca4964
+>>>>>>> db9b01cd9279c7f3c70a7202066adb77c4898a17
