@@ -1,0 +1,32 @@
+<<<<<<< HEAD
+=======
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <div class="container">
+
+
+        <% if @note.errors%>
+          <% @note.errors.full_messages.each do |message|  %>
+            <p><%= message %></p>
+          <% end %>
+        <% end %>
+
+        <%= bootstrap_form_for @note  do |f| %>
+          <%= f.collection_select :varietal_id, @varietals, :id, :name  %> <br>
+          <%= f.text_field :sweetness %> <br>
+          <%= f.text_field :acidity %> <br>
+          <%= f.text_field :tanin%> <br>
+          <%= f.number_field :alcohol%> <br>
+          <%= f.text_field :body%> <br>
+          <%= f.submit "Add Note", :class => 'btn btn-outline-danger'  %>
+        <% end %>
+
+      </div>
+  </body>
+</html>
+>>>>>>> 9b015e1826893acef885572b1a556e7483ca4964
