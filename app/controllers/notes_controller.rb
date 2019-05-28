@@ -29,12 +29,8 @@ class NotesController < ApplicationController
     def update
       @note = Note.find(params[:id])
 
-      if @note.update(notes_params).valid?
-         @post.update!
+      @note.update(notes_params)
         redirect_to varietal_path
-      else
-        render 'edit'
-      end
     end
 
 
