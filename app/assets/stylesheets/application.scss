@@ -30,6 +30,10 @@ font-family: 'Princess Sofia', cursive; */
   margin-top: 78px
 }
 
+.col-8 {
+  overflow: hidden;
+}
+
 .jumbotron {
   background-image: url('https://media0.giphy.com/media/3zfox4LvqnIas/giphy.gif');
   background-repeat: no-repeat;
@@ -50,9 +54,10 @@ nav {
 }
 
 
-#pic {
-  max-width:100%;
-  max-height:100%;
+.pic {
+  // width: 100%;
+  // object-fit: cover;
+
 }
 
  .container {

@@ -15,8 +15,8 @@
         <p> <%= @varietal.description %></p>
           <hr>
 
-        <div id="pic">
-             <%= link_to image_tag @varietal.image_url, :size => '760x580' %>
+        <div id="pic" >
+             <%= link_to image_tag @varietal.image_url, :class => "img-fluid" %>
           </div>
             <%= link_to "Edit", edit_varietal_path(@varietal), :class => "btn btn-outline-success" %>
             <hr>
