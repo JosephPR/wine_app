@@ -23,10 +23,12 @@
       </div>
       <div class="col-4">
           <h4>Tasting notes</h4>
-
           <hr>
-            <%= link_to 'Add notes', new_note_path, :class => 'btn btn-outline-primary' %>    <%= link_to 'Edit Notes', edit_note_path, :class => 'btn btn-outline-success' %>
+          <ul class="list-group list-group-flush">
+            <%= link_to 'Add Note', new_note_path, :class => 'btn btn-outline-primary' %>
+          </ul>
             <hr id="hrmain">
+            <br><br>
             <% @notes.each do |note| %>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item"><u>Sweetness:</u> <%= note.sweetness %></li>
@@ -34,7 +36,7 @@
                 <li class="list-group-item"><u>Tanin:</u> <%= note.tanin %></li>
                 <li class="list-group-item"><u>Alcohol:</u> <%= note.alcohol %></li>
                 <li class="list-group-item"><u>Body:</u> <%= note.body %></li><br>
-                <%= link_to 'Edit Note', edit_note_path(note.id) %><br>
+                <%= link_to 'Edit Note', edit_note_path(note.id), :class => 'btn btn-outline-success' %><br>
                 <br>
               </ul>
             <% end %>
