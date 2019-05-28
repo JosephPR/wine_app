@@ -10,7 +10,7 @@ class NotesController < ApplicationController
   end
 
   def create
-    @note = Note.create(note_params)
+    @note = Note.create(notes_params)
     if @note.errors.any?
       @varietals = Varietal.all
       render :new
@@ -22,7 +22,7 @@ class NotesController < ApplicationController
 
     private
 
-    def note_params
+    def notes_params
       params.require(:note).permit(:sweetness, :acidity, :tanin, :alcohol, :body)
     end
 end
