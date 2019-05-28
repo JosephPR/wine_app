@@ -13,12 +13,6 @@ class NotesController < ApplicationController
   def create
     @note = Note.create(notes_params)
 
-      if @note.errors.any?
-    @varietals = Varietal.all
-      render :new
-    else
-      redirect_to varietals_path
-
     if @note.errors.any?
       @varietals = Varietal.all
       render :new
