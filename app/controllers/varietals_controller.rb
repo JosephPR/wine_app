@@ -30,6 +30,21 @@ class VarietalsController < ApplicationController
     end
   end
 
+  def edit
+    @varietal = Varietal.find(params[:id])
+      @categories = Category.all
+  end
+
+  def update
+      @varietal = Varietal.find(params[:id])
+
+      if(@varietal.update(varietal_params))
+      redirect_to varietal_path
+      else
+        render 'edit'
+      end
+  end
+
   private
 
     def varietal_params
