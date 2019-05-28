@@ -1,11 +1,4 @@
 <h1>Edit Note</h1>
-<% if @note.errors.any?  %>
-  <ul>
-    <% @note.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-    <% end %>
-  </ul>
-<% end %>
 
 <%= form_for @note do |f| %>
   <%= f.collection_select :varietal_id, @varietals, :id, :name  %> <br>
