@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <div class="container">
+
+
+        <% if @varietal.errors%>
+          <% @varietal.errors.full_messages.each do |message|  %>
+            <p><%= message %></p>
+          <% end %>
+        <% end %>
+
+        <%= bootstrap_form_for @varietal  do |f| %>
+          <%= f.text_field :name %> <br>
+          <%= f.text_field :description %> <br>
+          <%= f.text_field :image_url%> <br>
+          <%= f.collection_select :category_id, @categories, :id, :name  %> <br>
+          <%= f.submit "Add Varietal", :class => 'btn btn-outline-danger'  %>
+        <% end %>
+
+      </div>
+  </body>
+</html>
