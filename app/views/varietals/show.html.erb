@@ -28,15 +28,17 @@
             <%= link_to 'Add notes', new_note_path, :class => 'btn btn-outline-primary' %>    <%= link_to 'Edit Notes', edit_note_path, :class => 'btn btn-outline-success' %>
             <hr id="hrmain">
             <% @notes.each do |note| %>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><u>Sweetness:</u> <%= note.sweetness %></li>
+                <li class="list-group-item"><u>Acidity:</u> <%= note.acidity %></li>
+                <li class="list-group-item"><u>Tanin:</u> <%= note.tanin %></li>
+                <li class="list-group-item"><u>Alcohol:</u> <%= note.alcohol %></li>
+                <li class="list-group-item"><u>Body:</u> <%= note.body %></li><br>
+                <%= link_to 'Edit Note', edit_note_path(note.id) %><br>
+                <br>
+              </ul>
+            <% end %>
 
-            <ul class="list-group list-group-flush">
-<li class="list-group-item"><u>Sweetness:</u>   <%= note.sweetness %></li>
-<li class="list-group-item"><u>Acidity:</u> <%= note.acidity %></li>
-<li class="list-group-item"><u>Tanin:</u>   <%= note.tanin %></li>
-<li class="list-group-item">  <u>Alcohol:</u> <%= note.alcohol %></li>
-<li class="list-group-item">  <u>Body:</u> <%= note.body %></li>
-  <% end %>
-</ul>
 <!--
             <h5></h5><br>
             <h5></h5><br>
