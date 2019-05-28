@@ -6,7 +6,7 @@ class NotesController < ApplicationController
 
   def new
     @note = Note.new
-    @varietal = Varietal.all
+    @varietals = Varietal.all
   end
 
   def create
