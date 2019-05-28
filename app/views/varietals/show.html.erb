@@ -28,7 +28,7 @@
             <%= link_to 'Add Note', new_note_path, :class => 'btn btn-outline-primary' %>
           </ul>
             <hr id="hrmain">
-            <br><br>
+            <br>
             <% @notes.each do |note| %>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item"><u>Sweetness:</u> <%= note.sweetness %></li>

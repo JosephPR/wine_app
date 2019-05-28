@@ -30,7 +30,7 @@ class NotesController < ApplicationController
       @note = Note.find(params[:id])
 
       @note.update(notes_params)
-        redirect_to varietal_path
+        redirect_to varietals_path
     end
 
 
