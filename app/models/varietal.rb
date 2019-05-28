@@ -1,5 +1,5 @@
 class Varietal < ApplicationRecord
-  belongs_to :category
-  belongs_to :note
+  has_one :category
+  #belongs_to :note
   validates  :name, uniqueness: true
 end

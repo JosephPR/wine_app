@@ -1,3 +1,3 @@
 class Note < ApplicationRecord
-  has_many  :varietals 
+  # has_many  :varietals 
 end
