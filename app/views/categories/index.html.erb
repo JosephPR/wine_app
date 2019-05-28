@@ -6,17 +6,18 @@
   </head>
   <body>
 
-
+    <div class="jumbotron jumbotron-fluid">
+      <div id="welcome"  class="container">
+        <h1 class="display-4">Wine Cellar</h1>
+        <p class="lead">Welcome to MyWineCellar! A place to store your knowledge of wine!</p>
+      </div>
+    </div>
 <div class="container">
-  <h2>Categories</h2>
 
     <% @categories.each do |category| %>
-      <h4><em><%=link_to  category.name, category_path(category) %> </em></h4>
+      <h4><em><%=link_to  category.name, category_path(category), :class => 'cats'%> </em></h4>
       <hr id="hrmain">
     <% end %>
-
-
-
 </div>
 
   </body>
