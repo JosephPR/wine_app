@@ -20,7 +20,8 @@
           <%= f.text_field :description %> <br>
           <%= f.text_field :image_url%> <br>
           <%= f.collection_select :category_id, @categories, :id, :name  %> <br>
-          <%= f.submit "Add Varietal", :class => 'btn btn-outline-warning',
+          <%= f.submit "Add Varietal", :class => 'btn btn-outline-light',
+                                       :style => 'color: rgb(111, 122, 16)',
                                        :id    =>  'add-varietal'  %>
         <% end %>
 

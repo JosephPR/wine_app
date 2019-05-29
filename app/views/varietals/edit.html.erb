@@ -19,7 +19,7 @@
           <%= f.text_field :description %> <br>
           <%= f.text_field :image_url%> <br>
           <%= f.collection_select :category_id, @categories, :id, :name  %> <br>
-          <%= f.submit "Edit Varietal", :class => 'btn btn-outline-success'  %>
+          <%= f.submit "Edit Varietal", :style => 'color: rgb(111, 122, 16)', :class => 'btn btn-outline-light', :id => 'add-varietal' %>
         <% end %>
 
       </div>

@@ -3,14 +3,18 @@
     <br/>
   <h1>Edit Note</h1>
   <br/>
-<%= bootstrap_form_for @note do |f| %>
+
+<%= bootstrap_form_for  @note do |f| %>
   <%= f.collection_select :varietal_id, @varietals, :id, :name  %> <br/>
   <%= f.text_field :sweetness %> <br>
   <%= f.text_field :acidity %> <br>
   <%= f.text_field :tanin%> <br>
   <%= f.number_field :alcohol%> <br>
   <%= f.text_field :body%> <br>
-  <%= f.submit "Update Note" %>
+  <%= f.submit "Update Note", :class => "btn btn-outline-light", :style => 'color: rgb(107, 35, 25)', :id => 'wine-search' %>
+
   <br><br>
 <% end %>
+
+
 </div>
