@@ -91,14 +91,11 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
-<<<<<<< HEAD
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
-=======
     devise-bootstrap-views (1.1.0)
     devise-i18n (1.8.0)
       devise (>= 4.6)
->>>>>>> master
     erubi (1.8.0)
     execjs (2.7.0)
     ffi (1.11.1)
