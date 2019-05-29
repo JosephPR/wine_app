@@ -36,8 +36,7 @@
                 <li class="list-group-item"><u>Tanin:</u> <%= note.tanin %></li>
                 <li class="list-group-item"><u>Alcohol:</u> <%= note.alcohol %></li>
                 <li class="list-group-item"><u>Body:</u> <%= note.body %></li><br/>
-                <%= link_to 'Edit Note', edit_note_path(note.id) %><br/>
-                <<%= link_to "Delete Note", note_path(post.id), method: "DELETE" %>
+                <%= link_to 'Edit Note', edit_note_path(note.id) %> <%= link_to "Delete Note", note_path(note.id), method: "DELETE" %>
                 <br/>
               </ul>
             <% end %>
