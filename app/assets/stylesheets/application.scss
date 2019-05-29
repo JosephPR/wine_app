@@ -75,6 +75,13 @@ color: #000;
 border-color: inherit;
 font-family: 'Signika Negative', sans-serif;
 }
+#wine-delete:hover {
+background-color:rgb(247, 51, 51);
+color: #fff;
+border-color: inherit;
+font-family: 'Signika Negative', sans-serif;
+}
+
 #wine-search:hover {
   background-color: rgba(170, 7, 7, 0.3);
   border-color: inherit;
@@ -83,6 +90,8 @@ font-family: 'Signika Negative', sans-serif;
 h5 {
   float: left;
 }
+
+
 
 #namelink {
   font-size: 1.5rem;

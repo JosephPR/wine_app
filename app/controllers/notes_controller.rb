@@ -10,6 +10,10 @@ class NotesController < ApplicationController
     # @varietal = Varietal.find(params[:id])
   end
 
+  def show
+    @note = Note.find(params[:id])
+  end
+
   def create
     @note = Note.create(notes_params)
 
@@ -20,6 +24,7 @@ class NotesController < ApplicationController
     redirect_to varietals_path
 
     end
+  end
 
     def edit
       @note = Note.find(params[:id])
@@ -40,7 +45,7 @@ class NotesController < ApplicationController
   end
 
 
-  end
+
 
 
 
