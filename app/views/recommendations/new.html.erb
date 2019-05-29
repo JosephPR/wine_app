@@ -1,0 +1,19 @@
+<div class="container">
+  <% @varietals = Varietal.all %>
+  <br/>
+  <h1>Find the Top 10 Wines</h1>
+  <h3>based on global wine scores</h3>
+  <br/>
+  <% if @recommendation.errors.any?  %>
+    <ul>
+      <% @recommendation.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <%= bootstrap_form_for @recommendation do |f| %>
+  <%= f.collection_select :varietal_id, @varietals, :id, :name %>
+  <br/>
+  <%= f.submit "Get Recommendations"%>
+<% end %>
+</div>

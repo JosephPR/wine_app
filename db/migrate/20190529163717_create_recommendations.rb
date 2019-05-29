@@ -3,9 +3,10 @@ class CreateRecommendations < ActiveRecord::Migration[5.2]
     create_table :recommendations do |t|
       t.references :varietal
       t.string   :name
-      t.string   :region
       t.integer  :year
-
+      t.string   :region
+      t.float    :score
+      t.string   :url
       t.timestamps
     end
   end

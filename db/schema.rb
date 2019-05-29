@@ -33,8 +33,10 @@ ActiveRecord::Schema.define(version: 2019_05_29_163717) do
   create_table "recommendations", force: :cascade do |t|
     t.integer "varietal_id"
     t.string "name"
-    t.string "region"
     t.integer "year"
+    t.string "region"
+    t.float "score"
+    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["varietal_id"], name: "index_recommendations_on_varietal_id"

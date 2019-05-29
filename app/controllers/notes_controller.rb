@@ -1,5 +1,6 @@
-class NotesController < ApplicationController
+# frozen_string_literal: true
 
+class NotesController < ApplicationController
   def index
     @varietals = Varietal.all
   end
@@ -17,7 +18,7 @@ class NotesController < ApplicationController
       @varietals = Varietal.all
       render :new
     else
-    redirect_to varietals_path
+      redirect_to varietals_path
 
     end
 
@@ -30,24 +31,19 @@ class NotesController < ApplicationController
       @note = Note.find(params[:id])
 
       @note.update(notes_params)
-        redirect_to varietals_path
+      redirect_to varietals_path
     end
 
-  def destroy
-    @note = Note.find(params[:id])
-    @note.destroy
-    redirect_to varietals_path
-  end
-
-
-  end
-
-
-
-
-    private
-
-    def notes_params
-      params.require(:note).permit(:sweetness, :acidity, :tanin, :alcohol, :body, :varietal_id)
+    def destroy
+      @note = Note.find(params[:id])
+      @note.destroy
+      redirect_to varietals_path
     end
+  end
+
+  private
+
+  def notes_params
+    params.require(:note).permit(:sweetness, :acidity, :tanin, :alcohol, :body, :varietal_id)
+  end
 end
