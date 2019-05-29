@@ -9,7 +9,7 @@
     <h1>  <%= @category.name %></h1> <br>
 
       <% @varietals.each do |varietal| %>
-       <%=link_to varietal.name, varietal %>
+       <%=link_to varietal.name, varietal, :style => 'color: rgb(101, 25, 5)' %>
        --- <%= varietal.description %>
        <hr id="hrred">
       <% end %>

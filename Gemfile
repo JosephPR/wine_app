@@ -30,7 +30,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'devise-i18n'
+gem 'devise-bootstrap-views', '~> 1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
