@@ -1,9 +1,9 @@
 <div class="container svg">
-  <br>
+  <br/>
   <h1>Edit Note</h1>
-  <br>
+  <br/>
 <%= form_for @note do |f| %>
-  <%= f.collection_select :varietal_id, @varietals, :id, :name  %> <br>
+  <%= f.collection_select :varietal_id, @varietals, :id, :name  %> <br/>
   <%= f.text_field :sweetness %> <br>
   <%= f.text_field :acidity %> <br>
   <%= f.text_field :tanin%> <br>

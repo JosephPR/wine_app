@@ -28,16 +28,17 @@
             <%= link_to 'Add Note', new_note_path, :class => 'btn btn-outline-primary' %>
           </ul>
             <hr id="hrmain">
-            <br>
+            <br/>
             <% @notes.each do |note| %>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item"><u>Sweetness:</u> <%= note.sweetness %></li>
                 <li class="list-group-item"><u>Acidity:</u> <%= note.acidity %></li>
                 <li class="list-group-item"><u>Tanin:</u> <%= note.tanin %></li>
                 <li class="list-group-item"><u>Alcohol:</u> <%= note.alcohol %></li>
-                <li class="list-group-item"><u>Body:</u> <%= note.body %></li><br>
-                <%= link_to 'Edit Note', edit_note_path(note.id), :class => 'btn btn-outline-success' %><br>
-                <br>
+                <li class="list-group-item"><u>Body:</u> <%= note.body %></li><br/>
+                <%= link_to 'Edit Note', edit_note_path(note.id) %><br/>
+                <<%= link_to "Delete Note", note_path(post.id), method: "DELETE" %>
+                <br/>
               </ul>
             <% end %>
 
