@@ -22,7 +22,7 @@
 
         <hr id="hrmain">
         <% @varietals.each do |varietal| %>
-
+          
           <p ><%=link_to varietal.name, varietal_path(varietal), :id => "namelink" %></p>
           <p>
             <%= varietal.description %></p>
