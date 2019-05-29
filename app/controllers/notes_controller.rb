@@ -33,6 +33,12 @@ class NotesController < ApplicationController
         redirect_to varietals_path
     end
 
+  def destroy
+    @note = Note.find(params[:id])
+    @note.destroy
+    redirect_to varietals_path
+  end
+
 
   end
 

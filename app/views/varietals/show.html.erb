@@ -13,11 +13,13 @@
 
           <h4> <u><b>Characteristics: </b></u></h4>
         <p> <%= @varietal.description %></p>
+          <%= link_to "Recommendations", recommendation_path %>
           <hr>
 
         <div id="pic" >
              <%= link_to image_tag @varietal.image_url, :class => "img-fluid" %>
           </div>
+            <br>
             <%= link_to "Edit Varietal", edit_varietal_path(@varietal), :class => "btn btn-outline-success" %>
             <hr>
       </div>
@@ -28,16 +30,16 @@
             <%= link_to 'Add Note', new_note_path, :class => 'btn btn-outline-primary' %>
           </ul>
             <hr id="hrmain">
-            <br>
+            <br/>
             <% @notes.each do |note| %>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item"><u>Sweetness:</u> <%= note.sweetness %></li>
                 <li class="list-group-item"><u>Acidity:</u> <%= note.acidity %></li>
                 <li class="list-group-item"><u>Tanin:</u> <%= note.tanin %></li>
                 <li class="list-group-item"><u>Alcohol:</u> <%= note.alcohol %></li>
-                <li class="list-group-item"><u>Body:</u> <%= note.body %></li><br>
-                <%= link_to 'Edit Note', edit_note_path(note.id), :class => 'btn btn-outline-success' %><br>
-                <br>
+                <li class="list-group-item"><u>Body:</u> <%= note.body %></li><br/>
+                <%= link_to 'Edit Note', edit_note_path(note.id) %> <%= link_to "Delete Note", note_path(note.id), method: "DELETE" %>
+                <br/>
               </ul>
             <% end %>
 
