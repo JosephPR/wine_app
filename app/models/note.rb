@@ -1,3 +1,3 @@
 class Note < ApplicationRecord
-  belongs_to  :varietal 
+  belongs_to  :varietal, optional: true
 end

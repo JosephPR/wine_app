@@ -13,12 +13,17 @@
 
           <h4> <u><b>Characteristics: </b></u></h4>
         <p> <%= @varietal.description %></p>
+          <%= link_to "Recommendations", recommendation_path %>
           <hr>
 
         <div id="pic" >
              <%= link_to image_tag @varietal.image_url, :class => "img-fluid" %>
           </div>
+<<<<<<< HEAD
           <br/>
+=======
+            <br>
+>>>>>>> 9445c15af1383f0b6de041379b57c2a83a9d5162
             <%= link_to "Edit Varietal", edit_varietal_path(@varietal), :class => "btn btn-outline-success" %>
             <br/>
             <hr>

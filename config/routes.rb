@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :recommendations
   devise_for :users
   resources :notes
   root 'categories#index'
