@@ -6,8 +6,8 @@ class NotesController < ApplicationController
 
   def new
     @note = Note.new
-
     @varietals = Varietal.all
+    # @varietal = Varietal.find(params[:id])
   end
 
   def create
