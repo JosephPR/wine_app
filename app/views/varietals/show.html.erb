@@ -31,7 +31,7 @@
           <%= link_to "Edit Varietal", edit_varietal_path(@varietal), :class => "btn btn-outline-light", :style => 'color: rgb(107, 35, 25)', :id => 'wine-search' %>
           <br/>
           <h4>
-            Reccomendations:
+            Recommendations:
           </h4>
             <% @recommendations.each do |rec| %>
             <% if rec.varietal_id == @varietal.id %>
