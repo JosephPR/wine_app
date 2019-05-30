@@ -10,4 +10,34 @@ RSpec.describe Varietal, type: :model do
       expect(Varietal.where(name:"Varietal1").first).to eql(@varietal)
     end
   end
+
+  describe 'Varietal' do
+    before do
+      @varietal = Varietal.create(description: 'Full body and MAD THICC')
+    end
+
+    it 'has a description' do
+      expect(Varietal.where(description:"Full body and MAD THICC").first).to eql(@varietal)
+    end
+  end
+
+  describe 'Varietal' do
+    before do
+      @varietal = Varietal.create(image_url: 'sexylocalwinedrinkingsingles.com')
+    end
+
+    it 'has an image' do
+      expect(Varietal.where(image_url:"sexylocalwinedrinkingsingles.com").first).to eql(@varietal)
+    end
+  end
+
+  describe 'Varietal' do
+    before do
+      @varietals = Varietal.all
+    end
+
+    it 'has Varietals' do
+      expect(Varietal.count.to be(>= 1))
+    end
+  end
 end
