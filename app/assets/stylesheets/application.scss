@@ -17,7 +17,7 @@ font-family: 'Crimson Text', serif;
 font-family: 'Signika Negative', sans-serif;
 font-family: 'Princess Sofia', cursive; */
 @import 'bootstrap';
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Nunito|Playfair+Display|Princess+Sofia|Signika+Negative&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Satisfy+Display|Nunito|Playfair+Display|Princess+Sofia|Signika+Negative&display=swap');
 
 
 .grapes::after {
@@ -78,6 +78,10 @@ font-family: 'Signika Negative', sans-serif;
   border-color: inherit;
 }
 
+h1, h2 {
+  font-family: 'Satisfy', cursive;
+}
+
 h5 {
   float: left;
 }
@@ -104,15 +108,22 @@ h5 {
 #nav {
   background-color: rgba(171, 104, 25, 0.69);
 }
+
 nav {
   font-family: 'Princess Sofia', cursive;
   font-size: 1rem;
 }
 
 
+
  .container {
    text-align: center;
   font-family: 'Playfair Display', serif;
+
+ }
+
+ .rec {
+   width: 50%
  }
 
  #lis {
@@ -120,13 +131,14 @@ nav {
  }
 
 #hrred{
-
+  width: 80%;
   border: 0;
   border-top: 1px solid rgba(212, 62, 15, 0.56);
   border-bottom: 1px solid #fff;
 }
 
  #hrmain {
+    width: 50%;
    height: 12px;
  border: 0;
  box-shadow: inset 0 10px 10px -12px rgba(80, 40, 40, 0.5);

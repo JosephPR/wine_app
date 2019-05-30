@@ -18,7 +18,7 @@
     </div>
   <div class="container svg">
     <div  class="row">
-      <div class="col-lg">
+      <div class="col-lg  rec">
         <hr id="hrmain">
           <% @recommendations.each do |recommendation| %>
             <p><%=link_to recommendation.name, varietals_path(@varietal), :id => "namelink" %></p>
