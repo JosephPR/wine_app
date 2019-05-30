@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container svg">
   <% @varietals = Varietal.all %>
   <br/>
   <h1>Find the Top 10 Wines</h1>
@@ -14,6 +14,6 @@
   <%= bootstrap_form_for @recommendation do |f| %>
   <%= f.collection_select :varietal_id, @varietals, :id, :name %>
   <br/>
-  <%= f.submit "Get Recommendations"%>
+  <%= f.submit "Get Recommendations", :class => 'btn btn-outline-light btn-sm', :style => 'color: rgb(107, 35, 25)', :id => 'wine-search'%>
 <% end %>
 </div>

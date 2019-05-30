@@ -67,11 +67,16 @@ class RecommendationsController < ApplicationController
       Recommendation.create(params).valid?
     end
     redirect_to recommendations_path
-    #redirect_to varietal_path(@varietal.id)
+    # redirect_to varietal_path(@varietal.id)
   end
 
   def index
-    @recommendations = Recommendation.all
+    if params[:search_term]
+      @recommendations = Recommendation.where("name LIKE ?", "%#{params[:search_term]}%")
+    else
+      @recommendations = Recommendation.all
+
+    end
     # @varietals = Varietal.all
     # @varietal = Varietal.find(params[:id])
   end

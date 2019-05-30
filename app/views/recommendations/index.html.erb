@@ -8,9 +8,13 @@
     <div class="container">
       <h1>
         <center>
-          <%=link_to "Get New Recommendations", new_recommendation_path%>
+          <%=link_to "Get New Recommendations", new_recommendation_path, :style => 'color: rgb(107, 35, 25)'%>
         </center>
-      </h1>
+        </h1>
+        <%= form_tag "/recommendations", method: :get do %>
+        <%= text_field_tag :search_term%>
+        <%= submit_tag "Search", :class => 'btn btn-outline-light btn-sm', :style => 'color: rgb(107, 35, 25)', :id => 'wine-search' %>
+      <% end %>
     </div>
   <div class="container svg">
     <div  class="row">

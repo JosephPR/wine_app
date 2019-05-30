@@ -44,7 +44,7 @@ class NotesController < ApplicationController
       @note.destroy
       redirect_to varietals_path
     end
-  end
+
 
   private
 
