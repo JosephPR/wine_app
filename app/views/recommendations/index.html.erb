@@ -21,7 +21,7 @@
       <div class="col-lg">
         <hr id="hrmain">
           <% @recommendations.each do |recommendation| %>
-            <p><%=link_to recommendation.name, recommendation_path(recommendation), :id => "namelink" %></p>
+            <p><%=link_to recommendation.name, varietals_path(@varietal), :id => "namelink" %></p>
             <p>Vintage: <%= recommendation.year %></p>
             <p>Region: <%= recommendation.region %></p>
             <p>Global Wine Score: <%= recommendation.score %></p>
