@@ -4,7 +4,7 @@ RSpec.describe Recommendation, type: :model do
 
   describe 'Recommendation' do
     before do
-      @recommendation = Recommendation.create(name: 'Sexy Thicc Grapes')
+      @recommendation = Recommendation.create(name: 'Sexy Thicc Grapes', url:'sexythiccgrapes.com')
     end
 
     it 'has a name' do

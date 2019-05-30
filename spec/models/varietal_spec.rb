@@ -33,11 +33,12 @@ RSpec.describe Varietal, type: :model do
 
   describe 'Varietal' do
     before do
+      thiccgrape = Varietal.create(name: "Thicc Grape")
       @varietals = Varietal.all
     end
 
     it 'has Varietals' do
-      expect(Varietal.count.to be(>= 1))
+      expect(@varietals.count).to be >= 1
     end
   end
 end
