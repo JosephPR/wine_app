@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'static/about'
   resources :recommendations
   devise_for :users
   resources :notes
