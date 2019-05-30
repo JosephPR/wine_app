@@ -10,6 +10,7 @@ class VarietalsController < ApplicationController
 
   def show
     @varietal = Varietal.find(params[:id])
+    @recommendations = Recommendation.all
     @notes    = Note.select{|note| note.varietal_id == @varietal.id}
     # @notes = Note.all
   end
