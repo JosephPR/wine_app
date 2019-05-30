@@ -48,20 +48,7 @@ class NotesController < ApplicationController
 
   private
 
-<<<<<<< HEAD
   def notes_params
     params.require(:note).permit(:sweetness, :acidity, :tanin, :alcohol, :body, :varietal_id)
   end
-=======
-
-
-
-
-
-    private
-
-    def notes_params
-      params.require(:note).permit(:sweetness, :acidity, :tanin, :alcohol, :body, :varietal_id)
-    end
->>>>>>> master
 end
