@@ -52,4 +52,15 @@ RSpec.describe Note, type: :model do
       expect(Note.where(alcohol: 12).first).to eql(@note)
     end
   end
+
+  describe 'Note' do
+    before do
+      thiccgrapes = Note.create(body: "Thicc Grape")
+      @note = Note.all
+    end
+
+    it 'has notes' do
+      expect(@note.count).to be >= 1
+    end
+  end
 end
