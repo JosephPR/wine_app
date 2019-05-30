@@ -5,6 +5,7 @@
 <% end %>
 <div class="container">
   <br><br>
+<<<<<<< HEAD
   <%= bootstrap_form_for @note do |f| %>
   <%= f.collection_select :varietal_id, @varietals, :id, :name %>
   <br>
@@ -20,5 +21,16 @@
   <br>
   <%= f.submit "Add Note"%>
 <% end %>
+=======
+        <%= bootstrap_form_for @note do |f| %>
+          <%= f.collection_select :varietal_id, @varietals, :id, :name  %> <br>
+          <%= f.text_field :sweetness %> <br>
+          <%= f.text_field :acidity %> <br>
+          <%= f.text_field :tanin%> <br>
+          <%= f.number_field :alcohol%> <br>
+          <%= f.text_field :body%> <br>
+          <%= f.submit "Add Note", :class => 'btn btn-outline-light btn-sm', :style => 'color: rgb(107, 35, 25)', :id => 'wine-search'%>
+        <% end %>
+>>>>>>> joe
 <br><br>
 </div>
