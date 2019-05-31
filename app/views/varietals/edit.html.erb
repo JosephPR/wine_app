@@ -5,23 +5,27 @@
     <title></title>
   </head>
   <body>
-      <div class="container  svg">
-          <h1>Edit Varietal</h1>
+    <div class="container  svg">
+      <h1>Edit Varietal</h1>
 
-        <% if @varietal.errors%>
-          <% @varietal.errors.full_messages.each do |message|  %>
-            <p><%= message %></p>
-          <% end %>
+      <% if @varietal.errors%>
+        <% @varietal.errors.full_messages.each do |message|  %>
+          <p><%= message %></p>
         <% end %>
+      <% end %>
 
-        <%= bootstrap_form_for @varietal  do |f| %>
-          <%= f.text_field :name %> <br>
-          <%= f.text_field :description %> <br>
-          <%= f.text_field :image_url%> <br>
-          <%= f.collection_select :category_id, @categories, :id, :name  %> <br>
-          <%= f.submit "Edit Varietal", :style => 'color: rgb(111, 122, 16)', :class => 'btn btn-outline-light', :id => 'add-varietal' %>
-        <% end %>
+      <%= bootstrap_form_for @varietal do |f| %>
+      <%= f.text_field :name %>
+      <br>
+      <%= f.text_field :description %>
+      <br>
+      <%= f.text_field :image_url%>
+      <br>
+      <%= f.collection_select :category_id, @categories, :id, :name %>
+      <br>
+      <%= f.submit "Edit Varietal", :style => 'color: rgb(111, 122, 16)', :class => 'btn btn-outline-light', :id => 'add-varietal' %>
+    <% end %>
 
-      </div>
-  </body>
+  </div>
+</body>
 </html>

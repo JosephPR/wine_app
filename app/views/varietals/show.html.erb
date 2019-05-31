@@ -33,16 +33,22 @@
           <h4>
             Recommendations:
           </h4>
-            <% @recommendations.each do |rec| %>
+          <% @recommendations.each do |rec| %>
             <% if rec.varietal_id == @varietal.id %>
-              <p><b><%= rec.name %></b></p>
-              <p>Vintage: <%= rec.year %></p>
-              <p>Region: <%= rec.region %></p>
-              <p>Global Wine Score: <%= rec.score %></p>
-            <p>  <%=link_to "Wine Details", rec.url %></p>
-            <hr>
+              <p>
+                <b><%= rec.name %></b>
+              </p>
+              <p>Vintage:
+                <%= rec.year %></p>
+              <p>Region:
+                <%= rec.region %></p>
+              <p>Global Wine Score:
+                <%= rec.score %></p>
+              <p>
+                <%=link_to "Wine Details", rec.url %></p>
+              <hr>
             <%end%>
-            <%end%>
+          <%end%>
 
           <hr>
         </div>

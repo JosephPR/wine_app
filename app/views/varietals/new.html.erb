@@ -5,27 +5,28 @@
     <title></title>
   </head>
   <body>
-      <div class="container grapes">
+    <div class="container grapes">
 
-
-        <% if @varietal.errors%>
-          <% @varietal.errors.full_messages.each do |message|  %>
-            <p><%= message %></p>
-          <% end %>
+      <% if @varietal.errors%>
+        <% @varietal.errors.full_messages.each do |message|  %>
+          <p><%= message %></p>
         <% end %>
-        <br>
-        <h1>New Varietal</h1>
+      <% end %>
+      <br>
+      <h1>New Varietal</h1>
 
-        <%= bootstrap_form_for @varietal  do |f| %>
-          <%= f.text_field :name %> <br>
-          <%= f.text_field :description %> <br>
-          <%= f.text_field :image_url%> <br>
-          <%= f.collection_select :category_id, @categories, :id, :name  %> <br>
-          <%= f.submit "Add Varietal", :class => 'btn btn-outline-light',
-                                       :style => 'color: rgb(111, 122, 16)',
-                                       :id    =>  'add-varietal'  %>
-        <% end %>
+      <%= bootstrap_form_for @varietal do |f| %>
+      <%= f.text_field :name %>
+      <br>
+      <%= f.text_field :description %>
+      <br>
+      <%= f.text_field :image_url%>
+      <br>
+      <%= f.collection_select :category_id, @categories, :id, :name %>
+      <br>
+      <%= f.submit "Add Varietal", :class => 'btn btn-outline-light', :style => 'color: rgb(111, 122, 16)', :id => 'add-varietal' %>
+    <% end %>
 
-      </div>
-  </body>
+  </div>
+</body>
 </html>

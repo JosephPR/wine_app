@@ -20,6 +20,82 @@ font-family: 'Princess Sofia', cursive; */
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text|Satisfy+Display|Nunito|Playfair+Display|Princess+Sofia|Signika+Negative&display=swap');
 
 
+nav {
+  font-family: 'Princess Sofia', cursive;
+  font-size: 1rem;
+}
+
+h1, h2 {
+  font-family: 'Satisfy', cursive;
+}
+
+h5 {
+  float: left;
+}
+
+ #lis {
+   text-decoration: none;
+ }
+
+ #hrredshort {
+   width: 70%;
+   border: 0;
+   border-top: 1px solid rgba(212, 62, 15, 0.56);
+   border-bottom: 1px solid #fff;
+ }
+
+#hrred{
+  width: 100%;
+  border: 0;
+  border-top: 1px solid rgba(212, 62, 15, 0.56);
+  border-bottom: 1px solid #fff;
+}
+
+ #hrmain {
+    width: 50%;
+   height: 12px;
+ border: 0;
+ box-shadow: inset 0 10px 10px -12px rgba(80, 40, 40, 0.5);
+ }
+
+ #welcome {
+   margin-bottom: 100px;
+   margin-top: 100px;
+ }
+
+ #add-varietal:hover {
+ background-color: rgba(222, 180, 54, 0.74);
+ color: #000;
+ border-color: inherit;
+ font-family: 'Signika Negative', sans-serif;
+ }
+
+ #wine-delete:hover {
+ background-color:rgb(247, 51, 51);
+ color: #fff;
+ border-color: inherit;
+ font-family: 'Signika Negative', sans-serif;
+ }
+
+ #wine-search:hover {
+   background-color: rgba(170, 7, 7, 0.3);
+   border-color: inherit;
+ }
+
+  #info {
+    font-size: 1.5rem;
+  }
+
+  #namelink {
+    font-size: 1.5rem;
+    color: rgb(152, 49, 11);
+  }
+
+  #nav {
+    background-color: rgba(171, 104, 25, 0.69);
+  }
+
+
 .grapes::after {
   content: "";
   display: block;
@@ -54,43 +130,6 @@ font-family: 'Princess Sofia', cursive; */
   right: 0;
 }
 
-#welcome {
-  margin-bottom: 100px;
-  margin-top: 100px;
-}
-
-#add-varietal:hover {
-background-color: rgba(222, 180, 54, 0.74);
-color: #000;
-border-color: inherit;
-font-family: 'Signika Negative', sans-serif;
-}
-
-#wine-delete:hover {
-background-color:rgb(247, 51, 51);
-color: #fff;
-border-color: inherit;
-font-family: 'Signika Negative', sans-serif;
-}
-
-#wine-search:hover {
-  background-color: rgba(170, 7, 7, 0.3);
-  border-color: inherit;
-}
-
-h1, h2 {
-  font-family: 'Satisfy', cursive;
-}
-
-h5 {
-  float: left;
-}
-
-#namelink {
-  font-size: 1.5rem;
-  color: rgb(152, 49, 11);
-}
-
 .col-4 {
   margin-top: 78px
 }
@@ -105,15 +144,6 @@ h5 {
   background-size: cover;
 }
 
-#nav {
-  background-color: rgba(171, 104, 25, 0.69);
-}
-
-nav {
-  font-family: 'Princess Sofia', cursive;
-  font-size: 1rem;
-}
-
  .container {
    text-align: center;
   font-family: 'Playfair Display', serif;
@@ -125,28 +155,4 @@ nav {
 
  .rec {
    width: 60%
- }
-
- #lis {
-   text-decoration: none;
- }
- #hrredshort {
-   width: 70%;
-   border: 0;
-   border-top: 1px solid rgba(212, 62, 15, 0.56);
-   border-bottom: 1px solid #fff;
- }
-
-#hrred{
-  width: 100%;
-  border: 0;
-  border-top: 1px solid rgba(212, 62, 15, 0.56);
-  border-bottom: 1px solid #fff;
-}
-
- #hrmain {
-    width: 50%;
-   height: 12px;
- border: 0;
- box-shadow: inset 0 10px 10px -12px rgba(80, 40, 40, 0.5);
  }

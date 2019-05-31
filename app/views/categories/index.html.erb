@@ -7,18 +7,21 @@
   <body>
 
     <div class="jumbotron jumbotron-fluid">
-      <div id="welcome"  class="container">
+      <div id="welcome" class="container">
         <h1 class="display-4 winecellar">Wine Cellar</h1>
         <p class="lead">Welcome to MyWineCellar! A place to store your knowledge of wine!</p>
       </div>
     </div>
-<div class="container grapes">
+    <div class="container grapes">
 
-    <% @categories.each do |category| %>
-      <h4><em><%=link_to  category.name, category_path(category), :id => "namelink"%> </em></h4>
-      <hr id="hrmain">
-    <% end %>
-</div>
+      <% @categories.each do |category| %>
+        <h4>
+          <em><%=link_to category.name, category_path(category), :id => "namelink"%>
+          </em>
+        </h4>
+        <hr id="hrmain">
+      <% end %>
+    </div>
 
   </body>
 </html>

@@ -6,12 +6,15 @@
   </head>
   <body>
     <div class="container svg">
-    <h1>  <%= @category.name %></h1> <br>
+      <h1>
+        <%= @category.name %></h1>
+      <br>
 
       <% @varietals.each do |varietal| %>
-       <%=link_to varietal.name, varietal, :style => 'color: rgb(101, 25, 5)' %>
-       --- <%= varietal.description %>
-       <hr id="hrred">
+        <%=link_to varietal.name, varietal, :style => 'color: rgb(101, 25, 5)' %>
+        ---
+        <%= varietal.description %>
+        <hr id="hrred">
       <% end %>
 
     </div>

@@ -5,31 +5,28 @@
     <title>Wine Geeks</title>
   </head>
   <body>
-<div class="container">
-  <div class="row">
-      <div class="col-lg">
-        <h2>Tasting Notes</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg">
+          <h2>Tasting Notes</h2>
 
-
-        <%= form_tag "/search", method: :get do %>
-        <%= text_field_tag :search_term%>
-        <%= submit_tag "Wine Search", :class => 'btn btn-outline-info btn-sm' %>
+          <%= form_tag "/search", method: :get do %>
+          <%= text_field_tag :search_term%>
+          <%= submit_tag "Wine Search", :class => 'btn btn-outline-info btn-sm' %>
         <% end %>
 
-<hr id="hrmain">
-      <% @varietals.each do |varietal| %>
+        <hr id="hrmain">
+        <% @varietals.each do |varietal| %>
 
           <p><%=link_to varietal.name, note_path(varietal) %></p>
 
-         <hr id="hrred">
+          <hr id="hrred">
         <% end %>
 
-
-
       </div>
-  </div>
+    </div>
 
-</div>
-<br><br><br>
-  </body>
+  </div>
+  <br><br><br>
+</body>
 </html>
