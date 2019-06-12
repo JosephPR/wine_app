@@ -11,16 +11,13 @@ class VarietalsController < ApplicationController
   def show
     @varietal = Varietal.find(params[:id])
     @recommendations = Recommendation.all
-    @notes    = Note.select{|note| note.varietal_id == @varietal.id}
-    # @notes = Note.all
+    @notes = Note.select{|note| note.varietal_id == @varietal.id}
   end
 
   def new
-    @varietal   = Varietal.new
-    @category   = Category.find{@varietal.category_id}
+    @varietal = Varietal.new
+    @category = Category.find{@varietal.category_id}
     @categories = Category.all
-
-
   end
 
   def create
@@ -35,14 +32,14 @@ class VarietalsController < ApplicationController
 
   def edit
     @varietal = Varietal.find(params[:id])
-      @categories = Category.all
+    @categories = Category.all
   end
 
   def update
       @varietal = Varietal.find(params[:id])
 
       if(@varietal.update(varietal_params))
-      redirect_to varietal_path
+        redirect_to varietal_path
       else
         render 'edit'
       end

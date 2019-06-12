@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-      @category = Category.find(params[:id])
-      @varietals = Varietal.select{|varietal| varietal.category_id == @category.id}
+    @category = Category.find(params[:id])
+    @varietals = Varietal.select{|varietal| varietal.category_id == @category.id}
   end
 end

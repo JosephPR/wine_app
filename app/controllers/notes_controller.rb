@@ -23,7 +23,6 @@ class NotesController < ApplicationController
       render :new
     else
       redirect_to varietals_path
-
     end
   end
 
