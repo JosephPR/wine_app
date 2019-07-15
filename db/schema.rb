@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_05_29_163717) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -19,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_163717) do
   end
 
   create_table "notes", force: :cascade do |t|
-    t.integer "varietal_id"
+    t.bigint "varietal_id"
     t.string "sweetness"
     t.string "acidity"
     t.string "tanin"
@@ -31,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_163717) do
   end
 
   create_table "recommendations", force: :cascade do |t|
-    t.integer "varietal_id"
+    t.bigint "varietal_id"
     t.string "name"
     t.integer "year"
     t.string "region"
@@ -58,7 +61,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_163717) do
     t.string "name"
     t.text "description"
     t.string "image_url"
-    t.integer "category_id"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_varietals_on_category_id"
