@@ -2,7 +2,8 @@
 
 This is an Ruby on Rails application in which a user can store their favorite wines into a sqlite database and add tasting notes.
 
-<img src="https://imgur.com/0PwvAwp" />
+<a href="https://imgur.com/0PwvAwp"><img src="https://i.imgur.com/0PwvAwps.gif" title="source: imgur.com" /></a>
+
 
 
  Bootstrap design, API intergration that allows a user to obtain recommendations for the varietal of choice.
