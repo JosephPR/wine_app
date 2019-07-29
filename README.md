@@ -6,7 +6,7 @@ This is an Ruby on Rails application in which a user can store their favorite wi
 
 
 
-![WineApp](https://giphy.com/gifs/cLlKIC9tmJAmuanEN4/html5)
+![WineApp](https://media.giphy.com/media/cLlKIC9tmJAmuanEN4/giphy.gif)
 
  Bootstrap design, API intergration that allows a user to obtain recommendations for the varietal of choice.
 
